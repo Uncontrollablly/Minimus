@@ -20,6 +20,14 @@
 
 		.logo {
 			margin-left: 32px;
+
+			&__text {
+				margin: 0 0 0 24px;
+				font-family: 'SegoeUI-Semibold,Segoe UI';
+				font-size: 23px;
+				font-weight: 600;
+				letter-spacing: 0.1em;
+			}
 		}
 	}
 
@@ -72,6 +80,7 @@
 				position: absolute;
 				top: -0.18rem;
 				left: 0.2rem;
+				transition: left 300ms linear;
 			}
 		}
 	}
