@@ -79,4 +79,45 @@
 
 .main {
 	height: 100vh;
+	background-image: linear-gradient(to top, #5ee7df 0, #66a6ff 100%);
+}
+
+.dark {
+	&.header {
+		background-color: #2b244d;
+		color: white;
+
+		.header__left-part {
+			.menu {
+				filter: invert(1);
+			}
+
+			.logo {
+				filter: invert(1);
+			}
+		}
+
+		.header__date-text {
+		}
+
+		.header__right-part {
+			.mode-toggle-text {
+			}
+
+			.mode-toggle {
+				&__bg {
+					background-color: #ff0070;
+				}
+
+				&__circle {
+					background-color: white;
+					left: 1.5rem;
+				}
+			}
+		}
+	}
+
+	&.main {
+		background: linear-gradient(to bottom, #372865, #000000);
+	}
 }

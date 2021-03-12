@@ -14,8 +14,7 @@
 		<section class="menu-footer"></section>
 	</nav>
 </aside>
-
-<header class="header">
+<header class="header" [class.dark]="darkMode">
 	<div class="header__left-part">
 		<img
 			class="menu"
@@ -36,7 +35,12 @@
 	<div class="header__right-part">
 		<span class="mode-toggle-text">Light</span>
 		<label class="mode-toggle">
-			<input type="checkbox" class="mode-toggle__input" />
+			<input
+				type="checkbox"
+				class="mode-toggle__input"
+				[checked]="darkMode"
+				(change)="darkMode = !darkMode"
+			/>
 			<div class="mode-toggle__bg"></div>
 			<div class="mode-toggle__circle"></div>
 		</label>
@@ -47,7 +51,7 @@
 <!-- Main Content -->
 
 <!--<router-outlet></router-outlet>-->
-<main class="main">
+<main class="main" [class.dark]="darkMode">
 	<div class="main__bg"></div>
 	<router-outlet></router-outlet>
 </main>
