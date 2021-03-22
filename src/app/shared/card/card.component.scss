@@ -1,8 +1,8 @@
-.card {
+:host {
 	width: 19rem;
 	height: 30rem;
+	display: inline-block;
 	cursor: pointer;
-	margin: 2rem;
 	padding: 2rem;
 	background-color: white;
 	border-radius: 1.75rem;
