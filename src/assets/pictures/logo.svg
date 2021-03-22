@@ -1,5 +1,5 @@
-
-<svg class="logo__icon" width="32" height="32" xmlns="http://www.w3.org/2000/svg">
+<svg class="logo__icon" width="32" height="32"
+	xmlns="http://www.w3.org/2000/svg">
 	<path fill="#00ff9b" d="M0 0v32L16 16z" data-name="Path 1"/>
 	<path fill="#003eff" d="M0 32h32v-32z" data-name="Path 2"/>
 </svg>

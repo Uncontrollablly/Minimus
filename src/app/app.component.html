@@ -14,19 +14,20 @@
 		<section class="menu-footer"></section>
 	</nav>
 </aside>
+
 <header class="header" [class.dark]="darkMode">
 	<div class="header__left-part">
 		<img
 			class="menu"
-			src="assets/pictures/menu.svg"
+			src="assets/pictures/icons/menu.svg"
 			alt="menu"
 			width="24px"
 		/>
 		<img class="logo" src="assets/pictures/logo.svg" alt="logo" />
-		<h3 class="logo__text">Minimus</h3>
+		<h1 class="logo__text">Minimus</h1>
 	</div>
 
-	<h3 class="header__date-text">TODAY</h3>
+	<h1 class="header__date-text">TODAY</h1>
 
 	<div class="header__right-part">
 		<span class="mode-toggle-text">Light</span>
@@ -45,15 +46,17 @@
 </header>
 
 <!-- Main Content -->
-
-<!--<router-outlet></router-outlet>-->
 <main class="main" [class.dark]="darkMode">
-	<div class="main__bg"></div>
+	<div class="main__content">
+		<app-weather-card
+			city="BEIJING"
+			[weatherInfo]="weatherInfo"
+		></app-weather-card>
+	</div>
 	<router-outlet></router-outlet>
 </main>
 
 <!-- Footer -->
-
 <footer class="footer">
 	<span class="copyright-text">Copyright © 2018 Minimus</span>
 </footer>

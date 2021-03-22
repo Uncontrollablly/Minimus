@@ -1,0 +1,69 @@
+<app-card class="weather-card" [ngClass]="{ dark: darkMode }">
+	<div class="weather-card__content">
+		<span class="city">{{ city }}</span>
+		<div class="weather-icon" [ngSwitch]="true">
+			<img
+				*ngSwitchCase="
+					weatherInfo.weather === Weather.Sunny ||
+					weatherInfo.weather === Weather.Clear
+				"
+				src="assets/pictures/weathers/sunny.svg"
+				alt="sunny"
+			/>
+			<img
+				*ngSwitchCase="weatherInfo.weather === Weather.Clouds"
+				src="assets/pictures/weathers/cloud.svg"
+				alt="cloud"
+			/>
+			<img
+				*ngSwitchCase="
+					[Weather.Rain, Weather.Drizzle, Weather.Mist].includes(
+						weatherInfo.weather
+					)
+				"
+				src="assets/pictures/weathers/rain.svg"
+				alt="rain"
+			/>
+			<img
+				*ngSwitchCase="
+					[Weather.Haze, Weather.Fog].includes(weatherInfo.weather)
+				"
+				src="assets/pictures/weathers/haze.svg"
+				alt="haze"
+			/>
+			<img
+				*ngSwitchCase="
+					[Weather.Storm, Weather.Thunderstorm].includes(
+						weatherInfo.weather
+					)
+				"
+				src="assets/pictures/weathers/storm.svg"
+				alt="storm"
+			/>
+		</div>
+		<div class="weather-info">
+			<div class="current-temperature">
+				{{ weatherInfo.currentTemp }}°
+			</div>
+			<div class="weather">{{ weatherInfo.weather }}</div>
+		</div>
+		<div class="temperature-range">
+			<div class="temperature-content min-temperature">
+				<img
+					class="arrow-icon min-temperature__icon"
+					src="assets/pictures/icons/arrow-down.svg"
+				/>
+				<span class="temperature-text">{{ weatherInfo.minTemp }}</span>
+				<span class="min-text">Min</span>
+			</div>
+			<div class="temperature-content max-temperature">
+				<img
+					class="arrow-icon max-temperature__icon"
+					src="assets/pictures/icons/arrow-up.svg"
+				/>
+				<span class="temperature-text">{{ weatherInfo.maxTemp }}</span>
+				<span class="max-text">Max</span>
+			</div>
+		</div>
+	</div>
+</app-card>

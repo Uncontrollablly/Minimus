@@ -32,6 +32,7 @@
 	}
 
 	&__date-text {
+		font-size: 1.2rem;
 		letter-spacing: 0.1rem;
 		text-transform: uppercase;
 		margin: 0.5rem 0;
@@ -106,13 +107,7 @@
 			}
 		}
 
-		.header__date-text {
-		}
-
 		.header__right-part {
-			.mode-toggle-text {
-			}
-
 			.mode-toggle {
 				&__bg {
 					background-color: #ff0070;

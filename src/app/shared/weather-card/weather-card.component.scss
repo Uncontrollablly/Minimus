@@ -1,0 +1,59 @@
+.weather-card {
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		.city {
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			letter-spacing: 0.1rem;
+			margin-bottom: 1rem;
+		}
+
+		.weather-icon {
+			width: 160px;
+			height: 160px;
+			margin-bottom: 32px;
+		}
+
+		.weather-info {
+			.current-temperature {
+				font-size: 3rem;
+			}
+
+			.weather {
+				font-size: 1rem;
+				text-transform: uppercase;
+				letter-spacing: 0.1rem;
+			}
+		}
+
+		.temperature-range {
+			display: flex;
+			justify-content: space-between;
+
+			.temperature-content {
+				width: 40px;
+				height: 112px;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				margin: 48px;
+
+				.temperature-text {
+					font-size: 2rem;
+				}
+
+				.min-text {
+					color: #00ff9b;
+				}
+
+				.max-text {
+					color: #ff0070;
+				}
+			}
+		}
+	}
+}
