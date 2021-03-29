@@ -1,0 +1,56 @@
+<aside class="side-bar">
+	<nav [class.nav--hidden]="!showSidebar" class="slide-menu">
+		<section class="menu-header">
+			<span class="greeting__text">Welcome Back</span>
+			<div class="profile-image__container">
+				<img src="#" alt="profile-image" class="profile__image" />
+			</div>
+			<div class="account-details">
+				<span class="name__text">Hamed Baatour</span>
+				<span class="email__text">hamedbaatour@gmail.com</span>
+			</div>
+		</section>
+		<section class="menu-body"></section>
+		<section class="menu-footer"></section>
+	</nav>
+</aside>
+
+<header class="header" [class.dark]="darkMode">
+	<div class="header__left-part">
+		<img
+			class="menu"
+			src="assets/pictures/icons/menu.svg"
+			alt="menu"
+			width="24px"
+		/>
+		<img class="logo" src="assets/pictures/logo.svg" alt="logo" />
+		<h1 class="logo__text">{{ title }}</h1>
+	</div>
+
+	<h1 class="header__date-text">TODAY</h1>
+
+	<div class="header__right-part">
+		<span class="mode-toggle-text">Light</span>
+		<label class="mode-toggle">
+			<input
+				type="checkbox"
+				class="mode-toggle__input"
+				[checked]="darkMode"
+				(change)="darkMode = !darkMode"
+			/>
+			<div class="mode-toggle__bg"></div>
+			<div class="mode-toggle__circle"></div>
+		</label>
+		<span class="mode-toggle-text">Dark</span>
+	</div>
+</header>
+
+<!-- Main Content -->
+<main class="main" [class.dark]="darkMode">
+	<router-outlet></router-outlet>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+	<span class="copyright-text">Copyright © 2018 Minimus</span>
+</footer>

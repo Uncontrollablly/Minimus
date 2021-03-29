@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WeatherCardComponent } from './weather-card.component';
+import { PageNotFoundComponent } from './page-not-found.component';
 
-describe('WeatherCardComponent', () => {
-	let component: WeatherCardComponent;
-	let fixture: ComponentFixture<WeatherCardComponent>;
+describe('PageNotFoundComponent', () => {
+	let component: PageNotFoundComponent;
+	let fixture: ComponentFixture<PageNotFoundComponent>;
 
 	beforeEach(async () => {
 		await TestBed.configureTestingModule({
-			declarations: [WeatherCardComponent]
+			declarations: [PageNotFoundComponent]
 		}).compileComponents();
 	});
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(WeatherCardComponent);
+		fixture = TestBed.createComponent(PageNotFoundComponent);
 		component = fixture.componentInstance;
 		fixture.detectChanges();
 	});
